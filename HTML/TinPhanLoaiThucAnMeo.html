@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Những loại thức ăn cho mèo giá bổ rẻ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../CSS/ThongBao.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css" />
+    <script src="../bootstrap/js/jquery.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../JS/BatLoiLogin.js"></script>
+    
+</head>
+<body style="background-color:#ecc62a">
+    <div class="container" style="padding-top:1%">
+        <header>
+            <div class="row">
+                <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
+                    <a href="Home.html"><img src="../IMAGE/ICON/logo_Petmeal.png" style="width:100%" /></a>
+                </div>
+                <div class="col-xs-0 col-sm-0 col-md-1 col-lg-1">
+
+                </div>
+                <div class="col-xs-5 col-sm-6 col-md-6 col-lg-6" style="margin-top:45px">
+                    <!--<form class="form-inline">
+                <input type="text" style="width:75%;margin-left:15%" class="form-control" /><span class="glyphicon glyphicon-search" style="color:#ecc62a"></span>
+            </form>-->
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <p style="font-size:15px;margin-top:-6%;color:#ecc62a;padding-left:6%">PetMeal - Website mua sắm thức ăn cho thú cưng tin cậy của mọi nhà </p>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:3%">
+                        <table style="width:90%">
+                            <tr>
+                                <td>
+                                    <form>
+                                        <input type="text" style="width:100%" />
+                                    </form>
+                                </td>
+                                <td style="background-color:#ecc62a">
+                                    <a href="#" style="color:black"><span class="glyphicon glyphicon-search" style="padding:15% 0 0 20%"></span></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+                    <div class="col-xs-0 col-sm-0 col-md-5 col-lg-5">
+
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+                        <div class="dangNhap">
+                            <a data-toggle="modal" data-target="#login" id="userName"><span class="glyphicon glyphicon-user" style="color:#ecc62a"></span> Login</a> &frasl;
+                            <a href="DangKy.html">Đăng ký</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <div id="login" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title">LogIn</h3>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-group">
+                            <label>User name</label>
+                            <input type="text" class="form-control" id="txtuser" onblur="ktUser()" />
+                            <span class="BatLoi" id="errUser"></span>
+                        </form>
+                        <form class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control" id="txtpass" onblur="ktPass()" />
+                            <span class="BatLoi" id="errPass"></span>
+                        </form>
+                        <form class="form-group">
+                            <a href="#">Quên mật khẩu?</a>
+                        </form>
+                        <form class="form-group">
+                            <input type="checkbox" /> Remember password
+                        </form>
+                        <form class="form-group">
+                            <input type="button" class="btn btn-success" value="LogIn" style="width:20%" onclick="LogIn()" />
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-inverse" id="navbar">
+            <div class="container-fluid">
+                <div class="topnav" id="myTopnav">
+                    <ul class="nav navbar-nav" style="margin-top: 1px; margin-bottom:1px;">
+                        <li><a href="Home.html" style="background-color:#ecc62a"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                        <li>
+                            <a href="GioiThieu.html" style="background-color:#ecc62a">Giới thiệu</a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="background-color:#ecc62a">Dog's food <span class="caret"></span></a>
+                            <ul class="dropdown-menu" style="background-color:#ecc62a">
+                                <li><a href="ThucAnChoKho.html">Thức ăn khô</a></li>
+                                <li><a href="ThucAnChoUot.html">Thức ăn ướt</a></li>
+                                <li><a href="ThucAnChoMem.html">Thức ăn mềm</a></li>
+                                <li><a href="SnacksCho.html">Snacks &amp; Treats</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="background-color:#ecc62a">Cat's food <span class="caret"></span></a>
+                            <ul class="dropdown-menu" style="background-color:#ecc62a">
+                                <li><a href="ThucAnMeoKho.html">Thức ăn khô</a></li>
+                                <li><a href="ThucAnMeoUot.html">Thức ăn ướt</a></li>
+                                <li><a href="ThucAnMeoMem.html">Thức ăn mềm</a></li>
+                                <li><a href="SnacksMeo.html">Snacks &amp; Treats</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ThongBao.html" style="background-color:#ecc62a">Thông báo </a>
+                        </li>
+                        <li>
+                            <a href="TuVan.html" style="background-color:#ecc62a">Tư vấn </a>
+                        </li>
+                        <li>
+                            <a href="GioHang.html" style="background-color:#ecc62a"><span class="glyphicon glyphicon-shopping-cart"></span>  Giỏ hàng</a>
+                        </li>
+                        <li class="icon" onclick="topnavbar()">
+                            <i class="glyphicon glyphicon-align-justify"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav> 
+        <div class="banner">
+            <img src="../IMAGE/ICON/banner1.jpg" style="width:100%" />
+        </div>
+        <div class="row" style="margin-top:1%">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="link">
+                    <a href="Home.html">Home</a> &frasl; <a href="TinPhanLoaiThucAnCMeo.html">Những loại thức ăn cho mèo giá bổ rẻ</a>
+                </div>
+            </div>
+        </div>
+        
+        <section>
+            <div class="row">
+                <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                    <h1 style="text-align:center">Những loại thức ăn cho mèo giá bổ rẻ</h1>
+                    <br />
+                    <p class="text-muted" style="font-size:15px">Đăng ngày 7/5/2020 by PetMeal</p>
+                    <br />
+                    <p>Bạn luôn muốn tìm cho boss yêu nhà mình loại thức ăn thật chất lượng, giúp boss mau béo ú và phát triển khỏe mạnh. Nhưng bạn lại đang bị kẹt ở mặt điều kiện tài chính và băn khoăn liệu loại thức ăn giá rẻ có thực sự tốt cho mèo cưng của bạn? Hãy cùng mình tìm hiểu về thông tin và chất lượng của các nhãn hiệu thức ăn hạt khô giá rẻ cho mèo phổ biến nhất hiện nay nhé!!!</p>
+                    <ul style="margin-left:2%">
+                        <li><a href="#loai1">Thức ăn cho mèo Me-o</a></li>
+                        <li><a href="#loai2">Thức ăn cho mèo Cat's Eye</a></li>
+                        <li><a href="#loai3">Thức ăn cho mèo Whiskas</a></li>
+                    </ul>
+                    <h3 id="loai1">1. Thức ăn cho mèo Me-o</h3>
+                    <img src="../IMAGE/TAMEO/KHO/CAT-TREAT-ME-O.jpg" style="width:40%;margin-left:10%" />
+                    <p style="font-weight:bold">Dành cho:</p>
+                    <p style="margin-left:4%">
+                        Dòng sản phẩm thức ăn cho mèo Meo-o mèo lớn có thể sử dụng làm thức ăn cho các bé mèo khoảng từ 8 tháng tuổi trở lên. Nếu boss nhà bạn còn quá bé thì tốt nhất không nên cho ăn dạng hạt khô hoặc mua loại Me-o kitten(mèo con) nhé!!!
+
+                    </p>
+                    <p style="font-weight:bold">Nguồn gốc</p>
+                    <p style="margin-left:4%">Thực phẩm cho mèo Meo-o là dòng sản phẩm được sản xuất tại Thái Lan, hàng nhập khẩu, phân phối chính hãng, nguồn gốc xuất xứ rõ ràng đủ tem và in nổi hạn sử dụng, khó làm giả.</p>
+                    <p style="margin-left:4%">Me-o đáp ứng, vượt qua tất cả các nhu cầu dinh dưỡng  được chấp nhận trên toàn cầu của Hoa Kỳ Hội đồng (NRC) nghiên cứu quốc gia , đảm bảo thú cưng của bạn được khỏe mạnh trong cuộc sống.</p>
+                    <p style="font-weight:bold">Ưu điểm</p>
+                    <ul style="margin-left:4%">
+                        <li>Tăng cường hệ thống miễn dịch, sự phát triển Promte và vóc dáng tốt</li>
+                        <li>Chủ động làm giảm ảnh hưởng của stress</li>
+                        <li>Tăng cường thị lực</li>
+                        <li>Giữ đôi mắt sáng và rõ ràng</li>
+                        <li>Giúp bạn dễ dàng hơn trong việc mang theo thức ăn cho bé ra ngoài, đi chơi, đi du lịch.</li>
+                    </ul>
+                    <p style="font-weight:bold">Nhược điểm</p>
+                    <ul style="margin-left:4%">
+                        <li>Với các đặc điểm của Me-o, ta có thể cần phải đề phòng rụng lông, lông xơ xấu, bệnh tiêu hóa khi cho mèo ăn hạt Me-o lâu dài.</li>
+                    </ul>
+                    <p style="font-weight:bold">Đánh giá và kết luận</p>
+                    <p style="margin-left:4%">Thức ăn cho mèo Me-o có giá rẻ, tiết kiệm, phù hợp cho những sen không có điều kiện mua các loại hạt cao cấp, nhưng vẫn đảm bảo các vấn đề dinh dưỡng. </p>
+                    <p style="margin-left:4%">Tuy nhiên không nên cho các boss ăn quá thường xuyên và trong thời gian dài sẽ gây hại. Khi cho boss ăn thức ăn hạt như Me-o hãy để một ít nước bên cạnh để boss có thể uống sau khi ăn để tránh sỏi thận.</p>
+
+                    <h3 id="loai2">2. Thức ăn cho mèo Cat's Eye</h3>
+                    <img src="../IMAGE/TAMEO/KHO/hat-kho-cats-eye-kitten-cat-danh-cho-meo-moi-lua-tuoi.jpg" style="width:40%;margin-left:20%" />
+                    <p style="font-weight:bold">Nguyên liệu chính</p>
+                    <p style="margin-left:4%">Bột thịt gà, Bột thịt, Bột cá, Ngô, Lúa mì, Bột đậu nành, Gạo lứt, Bột củ cải, Cellulose, Mỡ động vật, Dầu gà, Dầu đậu nành, Bột thịt gà thủy phân (Hương vị tự nhiên), Men bia, Taurine, Hạt lanh, DL -methionine, L-lysne, Axit hữu cơ, Retinyl acetate (vitamin A), Cholecalciferol (vitamin D3), DL-α-tocopherol acetate (vitamin E), Thiamin mononitrate (vitamin B1), Riboflavin (vitamin B2), Pyridox vitamin B6), Cyanocobalamin (vitamin B12), D-biotin (Biotin),...</p>
+                    <p style="font-weight:bold">Ưu điểm</p>
+                    <ul style="margin-left:4%">
+                        <li>Chăm sóc lông:Công thức với cellulose tự nhiên và bột củ cải đường để giúp kiểm soát bóng lông</li>
+                        <li>Mắt khỏe:Công thức với vitamin A và taurine cho đôi mắt sáng, khỏe mạnh và thị lực tốt.</li>
+                        <li>Hệ thống miễn dịch mạnh mẽ:dinh dưỡng đầy đủ với các chất chống oxy hóa quan trọng và chất lượng protein cao.</li>
+                        <li>Hệ tiêu hóa khỏe mạnh:công thức dễ tiêu hóa cho phép mèo của bạn nhận được dinh dưỡng tối ưu từ thức ăn mà ít lãng phí.</li>
+                        <li>Lông sáng bóng & khỏe mạnh:axit béo omega từ hạt lanh và thịt cá, vitamin A và protein chất lượng cao giúp bộ lông bóng và khỏe mạnh.</li>
+                        <li>Mùi vị tự nhiên</li>
+                    </ul>
+                    <p style="font-weight:bold">Nhược điểm</p>
+                    <ul style="margin-left:4%">
+                        <li>Cats Eye cũng không đủ hấp dẫn khi mèo đang muốn đổi loại thức ăn.</li>
+                        <li>Cats Eye cũng không đủ hấp dẫn khi mèo đang muốn đổi loại thức ăn.</li>
+                    </ul>
+
+                    <h3 id="loai3">3. Thức ăn cho mèo Whiskas</h3>
+                    <img src="../IMAGE/TAMEO/KHO/whiskas_ocean_fish_1_2kg.jpg" style="width:30%;margin-left:20%" />
+                    <p style="font-weight:bold">Thành phần</p>
+                    <ul style="margin-left:4%">
+                        <li>Ngũ cốc</li>
+                        <li>Đậu nành, dầu đậu nành, bã đậu nành</li>
+                        <li>Cá biển</li>
+                        <li>Màu thực phẩm – chất bảo quản – hương liệu</li>
+                        <li>Có thể các thành phần được bảo quản với BHA / BHT</li>
+                    </ul>
+                    <p style="font-weight:bold">Ưu điểm</p>
+                    <ul style="margin-left:4%">
+                        <li>Whiskas được sản xuất trên dây chuyền công nghệ hiện đại, các thành phần trong thức ăn được tính toán khoa học</li>
+                        <li>Sử dụng các loại nguyên liệu từ thiên nhiên, không chứa các loại phụ gia hóa học. An toàn cho mèo cưng nhà bạn</li>
+                        <li>Đa dạng về các loại hương vị để bạn lựa chọn. Có nhiều khối lượng túi khác nhau phù hợp với nhu cầu ăn của mèo</li>
+                        <li>Sản phẩm chứa nhiều chất xơ, vitamin… cung cấp chất cho sự phát triển của mèo</li>
+                    </ul>
+                    <p style="font-weight:bold">Nhược điểm</p>
+                    <ul style="margin-left:4%">
+                        <li> Giá của dòng sản phẩm thức ăn cho mèo Whiskas tuy thuộc vào hàng cao cấp nhưng độ dinh dưỡng lại không bằng hãng bình dân như Meo-o </li>
+                        <li>Lượng đạm, cá trong thức ăn cho mèo dạng khô Whiskas còn ít, có thành phần gây dị ứng</li>
+                        <li>Có thành phần đáng ngờ, chưa rõ nguồn gốc</li>
+                    </ul>
+                </div>
+                <div class="col-sx-3 col-sm-3 col-md-3 col-lg-3" style="margin-top:5%;box-shadow:0px 4px 8px #808080">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color:#ecc62a">
+                            <div style="color:white;font-size:22px">
+                                Tin tức nổi bật
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <a href="TinKhuyenMai.html"><img src="../IMAGE/ICON/bia1.png" style="width:100%;margin-top:20%" /></a>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <a href="TinKhuyenMai.html" class="news">Khuyến mãi 15% nhân dịp khai trương cửa hàng </a>
+                            </div>
+                            <hr style="width:100%" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <a href="TinPhanLoaiThucAnCho.html"><img src="../IMAGE/ICON/thucancho.jpg" style="width:100%;margin-bottom:10%" /></a>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <a href="TinPhanLoaiThucAnCho.html" class="news">Cách phân loại thức ăn bổ dưỡng cho cún con</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr style="margin-top:3%" />
+        <footer style="margin-top:2%">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-5 col-lg-5" style="padding-left:5%">
+                    <img src="../IMAGE/ICON/logo_petmeal.png" style="width:30%" />
+                    <p>
+                        Pet Meal là của hàng cung cấp thức ăn chó, mèo hàng đầu tại TP.Hồ Chí Minh.
+                        Chất lượng sản phẩm luôn được đặt lên hàng đầu và dịch vụ khách hàng cũng được shop chú trọng.
+                    </p>
+                    <p><span class="glyphicon glyphicon-earphone"></span> 0123456789</p>
+                    <p><span class="glyphicon glyphicon-envelope"></span> petmealvn@gmail.com</p>
+                </div>
+                <div class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></div>
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                    <p style="font-weight:bold">Nhóm sản phẩm</p>
+                    <ul style="padding-left:5%">
+                        <li><a href="ThucAnCho.html">Thức ăn cho chó</a></li>
+                        <li><a href="ThucAnMeo.html">Thức ăn cho mèo</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                    <p style="font-weight:bold">Hỗ trợ thanh toán</p>
+                    <img src="../IMAGE/ICON/visa.png" style="width:15%" />
+                    <img src="../IMAGE/ICON/jcb.png" style="width:15%" />
+                    <img src="../IMAGE/ICON/master.png" style="width:15%" />
+                    <img src="../IMAGE/ICON/american.png" style="width:15%" /><br />
+                    <img src="../IMAGE/ICON/bocongthuong.png" style="width:70%" />
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div>
+        <p style="text-align:center;font-size:60%;margin-top:1%">© 2007 - 2020 Công Ty Cổ Phần Bán Lẻ PetMeal / Địa chỉ: 40 , Đường số 2, P3, Q.Gò Vấp, TP. Hồ Chí Minh / GPĐKKD số 7567575456 do Sở KHĐT TP.HCM cấp ngày 08/03/2020. GP số 56/GP-TTĐT do sở TTTT TP HCM cấp ngày 02/07/2019. Điện thoại: 0123456789. Email: petmealvn@gmail.com.vn. Chịu trách nhiệm nội dung: Mã Vũ Tố Trâm, Huỳnh Thị Trang Đài</p>
+    </div>
+</body>
+</html>

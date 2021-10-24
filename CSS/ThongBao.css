@@ -1,0 +1,123 @@
+﻿*{
+    box-sizing: border-box;
+    margin:0 auto;
+    padding:0;  
+    font-size:18px;
+    font-family:Arial, Helvetica, sans-serif
+}
+body{
+    background-color:#ecc62a
+}
+div.container{
+    background-color:white
+}
+header input[type=text]{
+    border:1px solid #ecc62a
+}
+.dangNhap a{    
+    font-size:80%;
+    color:#ecc62a
+}
+.dangNhap{
+    padding-top:20%
+}
+#userName:hover{
+    cursor:pointer;
+}
+
+
+
+/*navbar*/
+/*#region */
+nav {
+    margin-top: 2%;
+}
+#navbar {
+    background-color: #ecc62a;
+    border-color: white;
+    z-index: 99;
+}
+.topnav li{
+    width:158.2px;
+}
+.topnav.responsive li {
+    float: none;
+    display: block;
+}
+.topnav ul .icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav li:not(:first-child) {display: none;}
+  .topnav li:first-child{float:left;}
+  .topnav ul .icon {
+    float: right;
+    display: block;
+    padding-left:30%;
+    padding-top:3%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative}
+  .topnav.responsive ul .icon {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .topnav.responsive ul li {
+    float: none;
+    display: block;
+  }
+}
+/*#endregion*/
+
+
+
+
+.link > a{
+    color:#ecc62a;
+    opacity:0.6;
+    text-decoration:none;
+}
+.link >a:hover{
+    color:#ecc62a;
+    opacity:1;
+    text-decoration:none;
+}
+.news {
+    color: #808080;
+    font-size: 90%;
+    font-size: 13px;
+}
+@media screen and (max-width:600px){
+    #hinhThongBao{
+        display:none;
+    }
+    .news{
+        font-size:7px;
+    }
+}
+.TenBanTinh{
+    font-size:25px;
+    color:black;
+}
+footer p {
+    font-size: 13px;
+}
+
+footer a:hover {
+    color: black;
+    text-decoration: none;
+}
+footer a {
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+}
+.BatLoi{
+    color:red;
+    font-size:13px;
+    font-style:italic;
+}

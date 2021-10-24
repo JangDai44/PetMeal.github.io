@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../CSS/Login.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css" />
+    <script src="../bootstrap/js/jquery.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        function ktHo() {
+            var ho = document.getElementById("txtHo").value;
+            var err = /^[A-Za-z0-9]+$/;
+            if (!err.test(ho)) {
+                document.getElementById("errHo").innerHTML = "Họ tên không được để trống";
+                return false;
+            }
+            else {
+                document.getElementById("errHo").innerHTML = "";
+                return true;
+            }
+        }
+        function ktTen() {
+            var ten = document.getElementById("txtTen").value;
+            var err = /^[A-Za-z]+$/;
+            if (!err.test(ten)) {
+                document.getElementById("errTen").innerHTML = "Họ tên không được để trống";
+                return false;
+            }
+            else {
+                document.getElementById("errTen").innerHTML = "";
+                return true;
+            }
+        }
+        function ktTenDangNhap() {
+            var nh = document.getElementById("TenDangNhap").value;
+            var err = /^[A-Za-z]{6,32}$/;
+            if (!err.test(nh)) {
+                document.getElementById("errDangNhap").innerHTML = "Tên đăng nhập có tối đa 6-32 ký tự và không chứa kí tự đặc biệt";
+                return false;
+            }
+            else {
+                document.getElementById("errDangNhap").innerHTML = "";
+                return true;
+            }
+        }
+        function ktMatKhau() {
+            var mk = document.getElementById("MatKhau").value;
+            var err = /^[A-Za-z0-9]{6,32}$/;
+            if (!err.test(mk)) {
+                document.getElementById("errMK").innerHTML = "Mật khẩu tối đa từ 6-32 ký tự và không chứa kí tự đặc biệt";
+                return false;
+            }
+            else {
+                document.getElementById("errMK").innerHTML = "";
+                return true;
+            }
+        }
+        function XacNhanMatKhau() {
+            var mk = document.getElementById("MatKhau").value;
+            var xh = document.getElementById("XNMatKhau").value;
+            if (mk == xh) {
+                document.getElementById("errXH").innerHTML = "";
+            }
+            else {
+                document.getElementById("errXH").innerHTML = "Mật khẩu không trùng khớp";
+            }
+        }
+        function ktSDT() {
+            var sdt = document.getElementById("SDT").value;
+            var err = /^0{1}[3|7|8|9]{1}[0-9]{8}$/;
+            if (!err.test(sdt)) {
+                document.getElementById("errSDT").innerHTML = "Sai định dạng số điện thoại, tối đa 10 chữ số";
+                return false;
+            }
+            else {
+                document.getElementById("errSDT").innerHTML = "";
+                return true;
+            }
+        }
+        function ktNgaySinh(){
+            var ns = document.getElementById("NgaySinh").value;
+            if (ns != "") {
+                document.getElementById("errNS").innerHTML = "";
+                return true;
+            }
+            else {
+                document.getElementById("errNS").innerHTML = "Chọn ngày sinh";
+                return false;
+            }
+        }
+        function dangKyThanhCong() {
+            if (ktHo() == true && ktTen() == true && ktMatKhau() == true && ktSDT() == true && ktNgaySinh() == true && XacNhanMatKhau() == true) {
+                document.getElementById("btnDangKy").disabled = false;
+            }
+            
+        }
+        
+    </script>
+</head>
+<body>
+   <div class="container">
+       <div class="row">
+           <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+           </div>
+           <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+               <h1 style="text-align:center;font-weight:bold">Đăng ký</h1><br />
+               <form class="form-horizontal">
+                   <div class="form-group">
+                       <div class="col-xs-6 col-ms-6 col-md-6 col-lg-6">
+                           <input type="text" id="txtHo" class="form-control" placeholder="Họ" onblur="ktHo()"/>
+                           <span class="BatLoi" id="errHo"></span>
+                       </div>
+                       <div class="col-xs-6 col-ms-6 col-md-6 col-lg-6">
+                           <input type="text" id="txtTen" class="form-control" placeholder="Tên" onblur="ktTen()"/>
+                           <span class="BatLoi" id="errTen"></span>
+                       </div>
+                   </div>
+               </form>
+               <div class="form-group">
+                   <input type="text" class="form-control" id="SDT" placeholder="Số điện thoại" onblur="ktSDT()" />
+                   <span class="BatLoi" id="errSDT"></span>
+               </div>
+               <div class="form-group">
+                   <input type="text" class="form-control" id="TenDangNhap" placeholder="Tên đăng nhập" onblur="ktTenDangNhap()" />
+                   <span class="BatLoi" id="errDangNhap"></span>
+               </div>
+               <div class="form-group">
+                   <input type="password" class="form-control" id="MatKhau" placeholder="Mật khẩu" onblur="ktMatKhau()" />
+                   <span class="BatLoi" id="errMK"></span>
+               </div>
+               <div class="form-group">
+                   <input type="password" class="form-control" id="XNMatKhau" placeholder="Xác nhận mật khẩu" onblur="XacNhanMatKhau()"/>
+                   <span class="BatLoi" id="errXH"></span>
+               </div>
+
+               <div class="form-group">
+                   <label for="NgaySinh" class="text-muted">Ngày sinh</label><br />
+                   <input type="date" id="NgaySinh" onblur="ktNgaySinh()" />
+                   <span class="BatLoi" id="errNS"></span>
+               </div>
+               <div class="form-group">
+                   <label class="text-muted">Giới tính</label><br />
+                   <input type="radio" id="radGTNu" value="Nu" name="GoiTinh"/> Nữ
+                   <input type="radio" id="radGTNam" value="Nam" name="GoiTinh"/> Nam
+               </div>
+               <div class="form-group">
+                  <a href="Home.html"><input type="button" value="Đăng ký" class="btn btn-success" disabled="disabled" id="btnDangKy"/></a>
+               </div>
+           </div>
+       </div>
+   </div>
+</body>
+</html>

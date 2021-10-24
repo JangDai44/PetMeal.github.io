@@ -1,0 +1,333 @@
+*{
+    box-sizing: border-box;
+    margin:0 auto;
+    padding:0;  
+    font-size:18px;
+    font-family:Arial, Helvetica, sans-serif
+}
+body{
+    background-color:#ecc62a
+}
+div.container{
+    background-color:white
+}
+.dangNhap a{    
+    font-size:80%;
+    color:#ecc62a;
+    cursor:pointer;
+}
+.dangNhap {
+    padding-top: 20%
+}
+header input[type=text]{
+    border:1px solid #ecc62a
+}
+/*modal dang nhap*/
+.modal-dialog .form-group {
+    width: 90%
+}
+
+
+
+/*ding dang phan bat loi dang nhap*/
+.BatLoi {
+    color: red;
+    font-size: 13px;
+    font-style: italic;
+}
+
+
+
+/*navbar*/
+/*#region */
+nav {
+    margin-top: 2%;
+}
+#navbar {
+    background-color: #ecc62a;
+    border-color: white;
+    z-index: 99;
+}
+.topnav li{
+    width:158.2px
+}
+.topnav.responsive li {
+    float: none;
+    display: block;
+}
+.topnav ul .icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav li:not(:first-child) {display: none;}
+  .topnav li:first-child{float:left;}
+  .topnav ul .icon {
+    float: right;
+    display: block;
+    padding-left:30%;
+    padding-top:3%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative}
+  .topnav.responsive ul .icon {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .topnav.responsive ul li {
+    float: none;
+    display: block;
+  }
+}
+/*#endregion*/
+
+
+
+@media only screen and (max-width: 600px) {
+    .dangNhap{
+        font-size:60%;
+    }
+}  
+
+
+/*Banner home*/
+/*#region*/
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+.mySlides {
+    display: none;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: black;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/*#endregion*/ 
+
+
+
+
+/*class menu vua co o Home vua co o cac loai thuc an*/
+/*#region*/
+.LocTheoGia{
+    list-style-type:none;
+    margin-top:3%;
+}
+.menu{
+    list-style-type:none;
+    margin-top:6%;
+    box-shadow:0px 5px 7px #808080
+}
+.menu li{
+    margin-top:2%;
+    padding-left:2%;
+    font-size:20px;
+}
+/*#endregion*/
+
+
+
+
+/*card san pham*/
+/*#region*/ 
+.card {
+    box-shadow: 0px 4px 8px 0px #808080;
+    text-align: center;
+    font-family: Arial;
+    margin-top: 10%;
+}
+.listSP {
+    display: none;
+}
+.show{display:inline-block}
+.card.show{
+    position:unset;
+}
+.card > img{
+    margin-top:5%;
+}
+.card button{
+    background-color:#ecc62a;
+    color:white;
+    width:100%;
+    border:none;
+    padding:3px 0px 3px 0px;
+}
+.card .price{
+    font-weight:bold;
+    margin:10% auto 10% auto;
+}
+.card button:hover{
+    opacity:0.7;
+}
+
+.card:hover{
+    border:none;
+    box-shadow:5px 8px 12px 0px #808080;
+}
+/*#endregion*/  
+
+
+
+
+/*section cua trang Home*/
+/*#region*/
+section h3{
+    font-weight:bold;
+    font-size:200%
+}
+section a{
+    text-decoration:none;
+    color:black;
+    font-size:110%;
+}
+section a:hover{
+    color:#ecc62a;
+    text-decoration:none;
+}
+section h2{
+    font-weight:bold;
+    text-shadow:2px 2px 4px #808080;
+    font-size:35px;
+}
+.ThucAn:hover{
+    color:#ecc62a;
+    text-decoration:none;
+}
+.ThucAn{
+    color:black;
+    text-decoration:none;
+    font-size:30px;
+    font-weight:bold
+}
+/*#endregion*/
+
+
+
+/*footer*/
+/*#region*/
+footer a{
+    text-decoration:none;
+    color:black;
+    font-size:13px;
+}
+footer p{
+    font-size:13px;
+}
+footer a:hover{
+    color:black;
+    text-decoration:none;
+}
+/*#endregion*/
+
+
+
+
+/*Duon link o dau moi trang*/
+/*#region*/
+.XemThem{
+    margin-top:15%
+}
+.link{
+    margin:3px 0 3px 0;
+    font-size:16px;
+}
+.link > a{
+    color:#ecc62a;
+    opacity:0.6;
+    text-decoration:none;
+}
+.link >a:hover{
+    color:#ecc62a;
+    opacity:1;
+    text-decoration:none;
+}
+.news {
+    color: #808080;
+    font-size: 90%;
+}
+/*#endregion*/
+
+
+
+/*Chi tiet san pham*/
+/*#region*/
+.checked {
+    color: #fbf108
+}
+
+.zoom:hover {
+    transform: scale(1.3);
+    cursor: zoom-in
+}
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #ecc62a;
+}
+.tab button {
+    background-color:inherit;
+    border: none;
+    outline: none;
+    cursor: pointer; 
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+.tab button:hover {
+    background-color:#ecc62a;
+}
+.tab button.active {
+    background-color:#eed779;
+}
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.tabcontent > ul{
+    margin-left:5%
+}
+.tabcontent > h4{
+    font-weight:bold
+}
+/*#endregion*/
+
+

@@ -1,0 +1,18 @@
+﻿* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif
+}
+body
+{
+    background-image:url(../IMAGE/ICON/bg_login.jpg);
+    background-repeat:no-repeat;
+    background-size:80%;
+}
+.BatLoi{
+    font-style:italic;
+    color:red;
+    font-size:12px;
+}

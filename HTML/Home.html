@@ -1,0 +1,483 @@
+﻿ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Pet Meal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../CSS/Home.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css" />
+    <script src="../bootstrap/js/jquery.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../JS/BatLoiLogin.js"></script>
+    
+
+</head>
+<body style="background-color:#ecc62a">
+    <div class="container" style="padding-top:1%">
+        <header>
+            <div class="row">
+                <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
+                    <a href="Home.html"><img src="../IMAGE/ICON/logo_Petmeal.png" style="width:100%" /></a>
+                </div>
+                <div class="col-xs-0 col-sm-0 col-md-1 col-lg-1">
+
+                </div>
+                <div class="col-xs-5 col-sm-6 col-md-6 col-lg-6" style="margin-top:45px">
+                    <!--<form class="form-inline">
+                <input type="text" style="width:75%;margin-left:15%" class="form-control" /><span class="glyphicon glyphicon-search" style="color:#ecc62a"></span>
+            </form>-->
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <p style="font-size:15px;margin-top:-6%;color:#ecc62a;padding-left:6%">PetMeal - Website mua sắm thức ăn cho thú cưng tin cậy của mọi nhà </p>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:3%">
+                        <table style="width:90%">
+                            <tr>
+                                <td>
+                                    <form>
+                                        <input type="text" style="width:100%" />
+                                    </form>
+                                </td>
+                                <td style="background-color:#ecc62a">
+                                    <a href="#" style="color:black"><span class="glyphicon glyphicon-search" style="padding:15% 0 0 20%"></span></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+                    <div class="col-xs-0 col-sm-0 col-md-5 col-lg-5">
+
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+                        <div class="dangNhap">
+                            <a data-toggle="modal" data-target="#login" id="userName"><span class="glyphicon glyphicon-user" style="color:#ecc62a"></span> Login</a> &frasl;
+                            <a href="DangKy.html">Đăng ký</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <div id="login" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title" style="text-align:center;font-weight:bold">Login</h3>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-group">
+                            <label>User name</label>
+                            <input type="text" class="form-control" id="txtuser" onblur="ktUser()" />
+                            <span class="BatLoi" id="errUser"></span>
+                        </form>
+                        <form class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control" id="txtpass" onblur="ktPass()" />
+                            <span class="BatLoi" id="errPass"></span>
+                        </form>
+                        <form class="form-group">
+                            <a href="#">Quên mật khẩu?</a>
+                        </form>
+                        <form class="form-group">
+                            <input type="checkbox" /> Remember password
+                        </form>
+                        <form class="form-group">
+                            <input type="button" class="btn btn-success" value="LogIn" style="width:20%" onclick="LogIn()" />
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-inverse" id="navbar">
+            <div class="container-fluid">
+                <div class="topnav" id="myTopnav">
+                    <ul class="nav navbar-nav" style="margin-top: 1px; margin-bottom:1px;">
+                        <li><a href="Home.html" style="background-color:#ecc62a"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                        <li>
+                            <a href="GioiThieu.html" style="background-color:#ecc62a">Giới thiệu</a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="background-color:#ecc62a">Dog's food <span class="caret"></span></a>
+                            <ul class="dropdown-menu" style="background-color:#ecc62a">
+                                <li><a href="ThucAnChoKho.html">Thức ăn khô</a></li>
+                                <li><a href="ThucAnChoUot.html">Thức ăn ướt</a></li>
+                                <li><a href="ThucAnChoMem.html">Thức ăn mềm</a></li>
+                                <li><a href="SnacksCho.html">Snacks &amp; Treats</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="background-color:#ecc62a">Cat's food <span class="caret"></span></a>
+                            <ul class="dropdown-menu" style="background-color:#ecc62a">
+                                <li><a href="ThucAnMeoKho.html">Thức ăn khô</a></li>
+                                <li><a href="ThucAnMeoUot.html">Thức ăn ướt</a></li>
+                                <li><a href="ThucAnMeoMem.html">Thức ăn mềm</a></li>
+                                <li><a href="SnacksMeo.html">Snacks &amp; Treats</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ThongBao.html" style="background-color:#ecc62a">Thông báo </a>
+                        </li>
+                        <li>
+                            <a href="TuVan.html" style="background-color:#ecc62a">Tư vấn </a>
+                        </li>
+                        <li>
+                            <a href="GioHang.html" style="background-color:#ecc62a"><span class="glyphicon glyphicon-shopping-cart"></span>  Giỏ hàng</a>
+                        </li>
+                        <li class="icon" onclick="topnavbar()">
+                            <i class="glyphicon glyphicon-align-justify"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+        </nav>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <!--Banner hình chạy-->
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="../IMAGE/ICON/bia2.png" alt="bia2">
+                        </div>
+
+                        <div class="item">
+                            <img src="../IMAGE/ICON/bia1.png" alt="bia1">
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <section style="margin-top:2%">
+            <div class="row">
+                <div class="col-xs-12 col-sm-10 col-md-9 col-lg-9">
+
+                    <!--Link dẫn đến thức ăn chó-->
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <div style="margin-bottom:2%;">
+                                <a class="ThucAn" href="ThucAnCho.html">Dog's food</a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"></div>
+                    </div>
+
+                    <!--Card thức ăn chó-->
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                            <div class="card">
+                                <a href="Chitietspcho.html"><img src="../IMAGE/TACHO/KHO/kho1.jpg" style="width:100%"></a>
+                                <h4 class="text-muted">Viên sữa dê Goat's Milk</h4>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <p class="price">22,000 VNĐ</p>
+                                <p><button onclick="addSP()"><span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button></p>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                            <div class="card">
+                                <a href="Chitietspcho.html"><img src="../IMAGE/TACHO/UOT/uot1.jpg" style="width:100%"></a>
+                                <h4 class="text-muted">Pate Unico cho chó 100gr</h4>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <p class="price">40,000 VNĐ</p>
+                                <p><button onclick="addSP()"><span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button></p>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                            <div class="card">
+                                <a href="Chitietspcho.html"><img src="../IMAGE/TACHO/MEM/mem1.jpg" style="width:100%"></a>
+                                <h4 class="text-muted">Pate monge - Thực phẩm ươt ...</h4>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <p class="price">22,000 VNĐ</p>
+                                <p><button onclick="addSP()"><span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button></p>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                            <div class="card">
+                                <a href="Chitietspcho.html"><img src="../IMAGE/TACHO/SNACKS/snacks1.jpg" style="width:100%"></a>
+                                <h4 class="text-muted">Phô mai viên cà rốt - rong biển</h4>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <p class="price">70,000 VNĐ</p>
+                                <p><button onclick="addSP()"><span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                            <div class="card">
+                                <a href="Chitietspcho.html"><img src="../IMAGE/TACHO/KHO/kho2.jpg" style="width:100%"></a>
+                                <h4 class="text-muted">Bánh Pedigree Dentastix...</h4>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <p class="price">30,000 VNĐ</p>
+                                <p><button onclick="addSP()"><span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button></p>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                            <div class="card">
+                                <a href="Chitietspcho.html"><img src="../IMAGE/TACHO/UOT/uot2.jpg" style="width:100%"></a>
+                                <h4 class="text-muted">Sữa bột Predogen cho chó 400gr</h4>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <p class="price">160,000 VNĐ</p>
+                                <p><button onclick="addSP()"><span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button></p>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                            <div class="card">
+                                <a href="Chitietspcho.html"><img src="../IMAGE/TACHO/KHO/kho3.jpg" style="width:100%"></a>
+                                <h4 class="text-muted">Thức ăn khô MIOCANE MINI</h4>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <p class="price">210,000 VNĐ</p>
+                                <p><button onclick="addSP()"><span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button></p>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                            <div class="card">
+                                <a href="Chitietspcho.html"><img src="../IMAGE/TACHO/MEM/mem2.jpg" style="width:100%"></a>
+                                <h4 class="text-muted">Thức ăn khô hạt mềm Zenith</h4>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <p class="price">200,000 VNĐ</p>
+                                <p><button onclick="addSP()"><span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <ul class="menu">
+                        <li style="background-color:#ecc62a;color:white"> Dog's food</li>
+                        <li><a href="ThucAnChoKho.html">Thức ăn khô</a></li>
+                        <li><a href="ThucAnChoUot.html">Thức ăn ướt</a></li>
+                        <li><a href="ThucAnChoMem.html">Thức ăn mềm</a></li>
+                        <li><a href="SnacksCho.html">Snacks &amp; Treats</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--Banner-->
+            <div class="row">
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <img src="../IMAGE/ICON/bannerhome1.gif" style="width:50%" />
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <img src="../IMAGE/ICON/bannerhome1.gif" style="width:50%" />
+                </div>
+
+                <!--<div class="col-xs-0 col-sm-0 col-md-5 col-lg-5"></div>-->
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <ul class="menu">
+                        <li style="background-color:#ecc62a;color:white"> Cat's food</li>
+                        <li><a href="ThucAnMeoKho.html">Thức ăn khô</a></li>
+                        <li><a href="ThucAnMeoUot.html">Thức ăn ướt</a></li>
+                        <li><a href="ThucAnMeoMem.html">Thức ăn mềm</a></li>
+                        <li><a href="SnacksMeo.html">Snacks &amp; Treats</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-10 col-md-9 col-lg-9" style="margin-top:1%">
+                    <!--Link đến thức ăn mèo-->
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <div style="margin-bottom:2%;">
+                                <a class="ThucAn" href="ThucAnMeo.html">Cat's food</a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6"></div>
+                    </div>
+
+                    <!--Card thức ăn mèo-->
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                            <div class="card">
+                                <a href="Chitietspmeo.html"><img src="../IMAGE/TAMEO/KHO/hat-kho-cats-eye-kitten-cat-danh-cho-meo-moi-lua-tuoi.jpg" style="width:100%"></a>
+                                <h4 class="text-muted">Hạt khô Cat's Eye Kitten Cat...</h4>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <p class="price">140,000 VNĐ</p>
+                                <p><button onclick="addSP()"><span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button></p>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                            <div class="card">
+                                <a href="Chitietspmeo.html"><img src="../IMAGE/TAMEO/KHO/CAT-TREAT-ME-O.jpg" style="width:100%"></a>
+                                <h4 class="text-muted">Thức ăn khô Cat Treat ME-O</h4>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <p class="price">90,000 VNĐ</p>
+                                <p><button onclick="addSP()"><span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button></p>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                            <div class="card">
+                                <a href="Chitietspmeo.html"><img src="../IMAGE/TAMEO/SNACKS/Pate-cho-meo-sheba-goi-70gr.jpg" style="width:100%"></a>
+                                <h4 class="text-muted">Pate cho mèo Sheba gói 70gr</h4>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <p class="price">17,000 VNĐ</p>
+                                <p><button onclick="addSP()"><span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button></p>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                            <div class="card">
+                                <a href="Chitietspmeo.html"><img src="../IMAGE/TACHO/SNACKS/snacks1.jpg" style="width:100%"></a>
+                                <h4 class="text-muted">Phô mai viên cà rốt - rong biển bowwow</h4>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <p class="price">70,000 VNĐ</p>
+                                <p><button onclick="addSP()"><span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                            <div class="card">
+                                <a href="Chitietspmeo.html"><img src="../IMAGE/TAMEO/MEM/thuc-an-zenith-hat-mem-cho-meo.jpg" style="width:100%"></a>
+                                <h4 class="text-muted">Thức ăn Zenith hạt mềm cho mèo</h4>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <p class="price">210,000 VNĐ</p>
+                                <p><button onclick="addSP()"><span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button></p>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                            <div class="card">
+                                <a href="Chitietspmeo.html"><img src="../IMAGE/TAMEO/UOT/Nutri-Plan-Pate-195gr.jpg" style="width:100%"></a>
+                                <h4 class="text-muted">Thức ăn ướt Nutri Plan Pate 195gr</h4>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <p class="price">70,000 VNĐ</p>
+                                <p><button onclick="addSP()"><span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button></p>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                            <div class="card">
+                                <a href="Chitietspmeo.html"><img src="../IMAGE/TAMEO/UOT/Pate-Unico_Meo-100gr.jpg" style="width:100%"></a>
+                                <h4 class="text-muted">Pate Unico thức ăn ướt cho mèo</h4>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <p class="price">40,000 VNĐ</p>
+                                <p><button onclick="addSP()"><span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button></p>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                            <div class="card">
+                                <a href="Chitietspmeo.html"><img src="../IMAGE/TAMEO/KHO/Royal-Canin-Kitten-36.jpg" style="width:100%"></a>
+                                <h4 class="text-muted">Royal Canin Kitten 36 ...</h4>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star checked"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <p class="price">1,400,000 VNĐ</p>
+                                <p><button onclick="addSP()"><span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr style="margin-top:3%" />
+        <footer style="margin-top:2%">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-5 col-lg-5" style="padding-left:5%">
+                    <img src="../IMAGE/ICON/logo_petmeal.png" style="width:30%" />
+                    <p>
+                        Pet Meal là của hàng cung cấp thức ăn chó, mèo hàng đầu tại TP.Hồ Chí Minh.
+                        Chất lượng sản phẩm luôn được đặt lên hàng đầu và dịch vụ khách hàng cũng được shop chú trọng.
+                    </p>
+                    <p><span class="glyphicon glyphicon-earphone"></span> 0123456789</p>
+                    <p><span class="glyphicon glyphicon-envelope"></span> petmealvn@gmail.com</p>
+                </div>
+                <div class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></div>
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                    <p style="font-weight:bold">Nhóm sản phẩm</p>
+                    <ul style="padding-left:5%">
+                        <li><a href="ThucAnCho.html">Thức ăn cho chó</a></li>
+                        <li><a href="ThucAnMeo.html">Thức ăn cho mèo</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                    <p style="font-weight:bold">Hỗ trợ thanh toán</p>
+                    <img src="../IMAGE/ICON/visa.png" style="width:15%" />
+                    <img src="../IMAGE/ICON/jcb.png" style="width:15%" />
+                    <img src="../IMAGE/ICON/master.png" style="width:15%" />
+                    <img src="../IMAGE/ICON/american.png" style="width:15%" /><br />
+                    <img src="../IMAGE/ICON/bocongthuong.png" style="width:70%" />
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div>
+        <p style="text-align:center;font-size:60%;margin-top:1%">© 2007 - 2020 Công Ty Cổ Phần Bán Lẻ PetMeal / Địa chỉ: 40 , Đường số 2, P3, Q.Gò Vấp, TP. Hồ Chí Minh / GPĐKKD số 7567575456 do Sở KHĐT TP.HCM cấp ngày 08/03/2020. GP số 56/GP-TTĐT do sở TTTT TP HCM cấp ngày 02/07/2019. Điện thoại: 0123456789. Email: petmealvn@gmail.com.vn. Chịu trách nhiệm nội dung: Mã Vũ Tố Trâm, Huỳnh Thị Trang Đài</p>
+    </div>
+</body>
+</html>
